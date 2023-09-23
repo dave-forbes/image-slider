@@ -90,3 +90,12 @@ img[data-index="7"], img[data-index="3"] {
   color:rgba(0, 0, 0, 0.642);
 }
 
+@media (max-width: 425px) {
+  .arrow {
+    transform: scale(1.6);
+  }
+  .dot {
+    transform: scale(1);
+  }
+}
+
