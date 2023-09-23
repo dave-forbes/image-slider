@@ -2,6 +2,8 @@ let slideIndex = 1;
 
 displayPicture();
 
+setInterval(slideRight, 5000);
+
 function slideRight() {
   displayPicture();
   if (slideIndex !== 8) {
