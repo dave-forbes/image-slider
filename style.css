@@ -26,9 +26,12 @@ body {
   width: 80vw;
   height: 50vh;
   object-fit: cover;
-  object-position: center;
   position: absolute;
   transition: opacity 0.8s linear;
+}
+
+img[data-index="7"], img[data-index="3"] {
+  object-position: top;
 }
 
 .arrow {
