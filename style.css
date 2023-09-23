@@ -1,0 +1,89 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display:grid;
+  place-items: center;
+  margin: 0;
+  background-color: black;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+.picture-frame {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+}
+
+.picture {
+  width: 80vw;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  transition: opacity 0.8s linear;
+}
+
+.arrow {
+  color: rgba(255, 255, 255, 0.657);
+  transform: scale(2.5);
+  display: grid;
+  height: 300px;
+  width: 25px;
+  place-items: center;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.4s;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.642);
+  color: white;
+}
+
+.right {
+  right:20px;
+  top: 20vh;
+  justify-content: start;
+}
+
+.left {
+  left:20px;
+  top: 20vh;
+  justify-content: end;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.657);
+  gap: 20px;
+  position:absolute;
+  bottom: 0;
+  left: 60px;
+  width: calc(80vw - 120px);
+  height: 50px;
+}
+
+.dot {
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(1.2);
+}
+
+.current-dot {
+  color: rgb(164, 0, 0);
+}
+
+.dot:hover {
+  color:rgba(0, 0, 0, 0.642);
+}
+
