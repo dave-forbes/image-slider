@@ -2,7 +2,7 @@ let slideIndex = 1;
 
 displayPicture();
 
-setInterval(slideRight, 5000);
+setInterval(slideRight, 10000);
 
 function slideRight() {
   displayPicture();
