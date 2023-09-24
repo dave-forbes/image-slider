@@ -27,7 +27,7 @@ body {
   height: 50vh;
   object-fit: cover;
   position: absolute;
-  transition: opacity 0.8s linear;
+  transition: opacity 1.3s linear;
 }
 
 img[data-index="7"], img[data-index="3"] {
