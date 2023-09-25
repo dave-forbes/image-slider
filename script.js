@@ -2,8 +2,6 @@ let slideIndex = 1;
 
 displayPicture();
 
-setInterval(slideRight, 10000);
-
 function slideRight() {
   displayPicture();
   if (slideIndex !== 8) {
@@ -51,4 +49,41 @@ function clickDot(e) {
 function currentDot() {
   const currentDot = document.querySelector(`i[data-index="${slideIndex}"]`);
   currentDot.classList.toggle("current-dot");
+}
+
+const play = document.querySelector(".play");
+const pause = document.querySelector(".pause");
+
+play.addEventListener("click", () => {
+  toggleButtons();
+  startInterval();
+});
+pause.addEventListener("click", () => {
+  toggleButtons();
+  stopInterval();
+});
+
+function toggleButtons() {
+  if (pause.classList.contains("remove")) {
+    play.classList.toggle("remove");
+    pause.classList.toggle("remove");
+  } else if (play.classList.contains("remove")) {
+    play.classList.toggle("remove");
+    pause.classList.toggle("remove");
+  }
+}
+
+let interval;
+
+function startInterval() {
+  if (!interval) {
+    interval = setInterval(slideRight, 5000);
+    console.log("start");
+  }
+}
+
+function stopInterval() {
+  clearInterval(interval);
+  interval = null;
+  console.log("stop");
 }
