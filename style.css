@@ -35,7 +35,7 @@ img[data-index="7"], img[data-index="3"] {
 }
 
 .arrow {
-  color: rgba(255, 255, 255, 0.657);
+  color: rgba(0, 0, 0, 0.642);
   transform: scale(2.5);
   display: grid;
   height: 300px;
@@ -67,7 +67,7 @@ img[data-index="7"], img[data-index="3"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(255, 255, 255, 0.657);
+  color:rgba(0, 0, 0, 0.642);
   gap: 20px;
   position:absolute;
   bottom: 0;
@@ -87,7 +87,27 @@ img[data-index="7"], img[data-index="3"] {
 }
 
 .dot:hover {
+  color: rgba(255, 255, 255, 0.657);
+  
+}
+
+.fa-play, .fa-pause {
   color:rgba(0, 0, 0, 0.642);
+  position: absolute;
+  top: 20px;
+  left: calc(40vw - 6px);
+  transform: scale(2);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.play:hover, .pause:hover, .play:focus, .pause:focus {
+  color: white;
+}
+
+.remove {
+  display: none !important;
 }
 
 @media (max-width: 425px) {
